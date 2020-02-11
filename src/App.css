@@ -1,0 +1,158 @@
+:root {
+  --item-background: lightblue;
+  --span-item-background: lightskyblue;
+  --hover-item: midnightblue;
+  --background: white;
+}
+
+body {
+  font-size: 14px;
+  background-color: var(--background);
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+}
+
+.App {
+  text-align: left;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.App-header {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+}
+
+.sentencesForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sentencesForm > * {
+  width: 100%;
+}
+
+.sentencesForm ul {
+  list-style: none;
+  text-align: left;
+  padding-inline-start: 0;
+  display: block;
+  height: 60vh;
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+.sentencesForm li {
+  white-space: nowrap;
+  display: table-row;
+}
+
+.sentence {
+  display: table-cell;
+  padding: 10px;
+  height: 2em;
+  border: var(--background) solid 3px;
+  background-color: var(--item-background);
+}
+
+.sentence.without-spans {
+}
+
+.sentence.without-spans:hover {
+  background-color: var(--hover-item);
+  color: white;
+  cursor: pointer;
+}
+
+.sentence.with-spans {
+  user-select: none;
+  background-color: var(--span-item-background);
+}
+
+
+@-webkit-keyframes loadingCycle {
+  0%{background-position:0 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0 50%}
+}
+@keyframes loadingCycle {
+  0%{background-position:0 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0 50%}
+}
+
+.sentence.loading {
+  background: linear-gradient(270deg, var(--hover-item), var(--item-background));
+  background-size: 200% 200%;
+
+  -webkit-animation: loadingCycle 1s ease infinite;
+  animation: loadingCycle 1s ease infinite;
+}
+
+.inputRow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+}
+
+.inputRow input {
+  width: 80%;
+  height: 26px;
+  flex-grow: 1;
+  padding-left: 5px;
+}
+
+.inputRow button {
+  margin-left: 5px;
+  height: 30px;
+}
+
+.sentencesForm li img {
+  margin-right: 10px;
+}
+
+.moreButton {
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.span01 {
+  background-color: purple;
+  color: white;
+}
+
+.span02 {
+  background-color: lawngreen;
+}
+
+.span03 {
+  background-color: yellow;
+}
+
+.span04 {
+  background-color: darkred;
+  color: white;
+}
+
+.span05 {
+  background-color: orange;
+}
+
+.span06 {
+  background-color: moccasin;
+}
+
+@media (max-width: 480px) {
+}
